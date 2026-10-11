@@ -2,7 +2,6 @@ package com.queimaduras.familiars.data
 
 import com.queimaduras.familiars.Familiars
 import com.queimaduras.familiars.materials.Materials
-import com.queimaduras.familiars.summoning.Summoning
 import net.minecraft.client.data.models.BlockModelGenerators
 import net.minecraft.client.data.models.ItemModelGenerators
 import net.minecraft.client.data.models.ModelProvider

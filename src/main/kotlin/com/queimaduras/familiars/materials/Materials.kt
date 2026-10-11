@@ -2,7 +2,6 @@ package com.queimaduras.familiars.materials
 
 import com.queimaduras.familiars.Familiars
 import com.queimaduras.familiars.core.FamiliarsTab
-import com.queimaduras.familiars.summoning.Summoning
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent
 import net.neoforged.neoforge.registries.DeferredRegister
