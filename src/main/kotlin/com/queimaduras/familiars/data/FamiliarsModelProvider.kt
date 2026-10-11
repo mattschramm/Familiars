@@ -12,5 +12,6 @@ import net.minecraft.data.PackOutput
 class FamiliarsModelProvider(output: PackOutput) : ModelProvider(output, Familiars.MODID) {
     override fun registerModels(blockModels: BlockModelGenerators, itemModels: ItemModelGenerators) {
         itemModels.generateFlatItem(Materials.SALT.get(), ModelTemplates.FLAT_ITEM)
+        itemModels.generateFlatItem(Materials.MERCURY_BOTTLE.get(), ModelTemplates.FLAT_ITEM)
     }
 }

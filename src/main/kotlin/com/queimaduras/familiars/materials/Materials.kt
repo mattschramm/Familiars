@@ -11,6 +11,7 @@ object Materials {
     private val ITEMS = DeferredRegister.createItems(Familiars.MODID)
 
     val SALT = ITEMS.registerSimpleItem("salt")
+    val MERCURY_BOTTLE = ITEMS.registerSimpleItem("mercury-bottle")
 
     fun register(bus: IEventBus) {
         ITEMS.register(bus)
@@ -20,6 +21,7 @@ object Materials {
     private fun addToTab(event: BuildCreativeModeTabContentsEvent) {
         if (event.tabKey == FamiliarsTab.MAIN.key) {
             event.accept(SALT)
+            event.accept(MERCURY_BOTTLE)
         }
     }
 }
