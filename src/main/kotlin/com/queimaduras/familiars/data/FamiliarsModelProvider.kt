@@ -12,5 +12,9 @@ class FamiliarsModelProvider(output: PackOutput) : ModelProvider(output, Familia
     override fun registerModels(blockModels: BlockModelGenerators, itemModels: ItemModelGenerators) {
         itemModels.generateFlatItem(Materials.SALT.get(), ModelTemplates.FLAT_ITEM)
         itemModels.generateFlatItem(Materials.MERCURY_BOTTLE.get(), ModelTemplates.FLAT_ITEM)
+        itemModels.generateFlatItem(Materials.CRUSHED_SULFUR.get(), ModelTemplates.FLAT_ITEM)
+        itemModels.generateFlatItem(Materials.CRUSHED_CINNABAR.get(), ModelTemplates.FLAT_ITEM)
+
+        blockModels.createTrivialCube(Materials.SALT_BLOCK.block.get())
     }
 }

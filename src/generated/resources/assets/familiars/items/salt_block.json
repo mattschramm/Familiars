@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "familiars:item/mercury-bottle"
+    "model": "familiars:block/salt_block"
   }
 }
