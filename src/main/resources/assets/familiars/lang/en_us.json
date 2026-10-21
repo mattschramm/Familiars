@@ -1,4 +1,8 @@
 {
   "itemGroup.familiars": "Familiars",
-  "item.familiars.salt": "Salt"
+  "item.familiars.salt": "Salt",
+  "item.familiars.mercury_bottle": "Mercury Bottle",
+  "item.familiars.crushed_sulfur": "Crushed Sulfur",
+  "item.familiars.crushed_cinnabar": "Crushed Cinnabar",
+  "block.familiars.salt_block": "Salt Block"
 }

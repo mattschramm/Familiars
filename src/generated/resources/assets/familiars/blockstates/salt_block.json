@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "familiars:block/salt_block"
+    }
+  }
+}
