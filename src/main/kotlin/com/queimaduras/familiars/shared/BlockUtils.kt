@@ -1,4 +1,4 @@
-package com.queimaduras.familiars.util
+package com.queimaduras.familiars.shared
 
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.level.block.Block

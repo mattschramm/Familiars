@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "ritual_materials",
+  "ingredients": [
+    "familiars:salt_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "familiars:salt"
+  }
+}

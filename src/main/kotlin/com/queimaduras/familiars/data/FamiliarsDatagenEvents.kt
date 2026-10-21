@@ -1,5 +1,7 @@
 package com.queimaduras.familiars.data
 
+import net.minecraft.data.loot.LootTableProvider
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.data.event.GatherDataEvent
@@ -8,9 +10,25 @@ import net.neoforged.neoforge.data.event.GatherDataEvent
 object FamiliarsDatagenEvents {
     @SubscribeEvent
     fun gatherData(event: GatherDataEvent.Client) {
-        val generator = event.generator
-        val packOutput = generator.packOutput
+        event.run {
+            createProvider(::FamiliarsModelProvider)
 
-        generator.addProvider(true, FamiliarsModelProvider(packOutput))
+            createProvider(::FamiliarsItemTagProvider)
+
+            createProvider(::FamiliarsBlockTagProvider)
+
+            createProvider { output, lookupProvider ->
+                LootTableProvider(
+                    output,
+                    setOf(),
+                    listOf(
+                        LootTableProvider.SubProviderEntry(::FamiliarsBlockLootTableProvider, LootContextParamSets.BLOCK)
+                    ),
+                    lookupProvider
+                )
+            }
+
+            createProvider { output, lookupProvider -> FamiliarsRecipeProvider.Runner(output, lookupProvider) }
+        }
     }
 }
